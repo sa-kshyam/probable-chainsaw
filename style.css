@@ -45,7 +45,10 @@
   --shadow-3: 0 5px 10px hsla(357, 64%, 53%, 25%);
   --shadow-4: 0 30px 50px hsla(357, 64%, 53%, 30%);
   --section-spacing: 80px;
-
+  --radius-pill: 200px;
+  --radius-circle: 50%;
+  --radius-30: 30px;
+  --radius-20: 20px;
 
   /* transistion */
   --transition-1: 250ms ease;
@@ -186,9 +189,16 @@ img {
   height: auto;
 }
 
+.section-subtitle {
+  color: var(--text-majorelle-blue);
+  font-weight: var(--weight-medium);
+  text-transform: uppercase;
+}
 
+.section-title {
+  margin-block: 10px;
 
-
+}
 
 
 
@@ -370,16 +380,16 @@ img {
 }
 
 
-.hero-title{
+.hero-title {
   margin-block: 20px;
 }
 
 
-.hero-text{
+.hero-text {
   margin-block-end: 30px;
 }
 
-.hero .btn-secondary{
+.hero .btn-secondary {
   margin-block-end: 20px;
 }
 
@@ -387,7 +397,8 @@ img {
   height: 50px;
   color: var(--text-white);
   padding-inline: 30px;
-  border-radius: 100px; /* CHANGED: Forcing a hard value ensures it stays a perfect pill shape */
+  border-radius: 100px;
+  /* CHANGED: Forcing a hard value ensures it stays a perfect pill shape */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -395,15 +406,6 @@ img {
   max-width: max-content;
   transition: var(--transition-1);
 }
-.hero-btn .btn-img {
-  position: relative;
-  width: 60px;
-  height: 60px;
-  background-color: var(--bg-gainsboro);
-  border-radius: 50%;
-  box-shadow: var(--shadow-1);
-  margin-right: 15px; /* ADDED: This pushes the text away so the icon has room to overlap safely */
-} 
 
 .hero-btn .btn-img {
   position: relative;
@@ -412,7 +414,19 @@ img {
   background-color: var(--bg-gainsboro);
   border-radius: 50%;
   box-shadow: var(--shadow-1);
-  flex-shrink: 0; /* ADDED: Ensures the circle never gets squished or distorted */
+  margin-right: 15px;
+  /* ADDED: This pushes the text away so the icon has room to overlap safely */
+}
+
+.hero-btn .btn-img {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-color: var(--bg-gainsboro);
+  border-radius: 50%;
+  box-shadow: var(--shadow-1);
+  flex-shrink: 0;
+  /* ADDED: Ensures the circle never gets squished or distorted */
 }
 
 .hero-btn ion-icon {
@@ -432,7 +446,8 @@ img {
   font-weight: var(--weight-medium);
   display: flex;
   align-items: center;
-  gap: 25px; /* Keeps a clean spacing gap */
+  gap: 25px;
+  /* Keeps a clean spacing gap */
   transition: var(--transition-1);
   flex-wrap: nowrap;
 }
@@ -444,12 +459,42 @@ img {
   transition: var(--transition-2);
   border-radius: 50%;
 }
+
 .hero-btn .text {
-  white-space: nowrap; /* ADDED: Forces "Watch our Story" to stay on a single line */
+  white-space: nowrap;
+  /* ADDED: Forces "Watch our Story" to stay on a single line */
 }
-.hero-btn:is(:hover, :focus-visible){
+
+.hero-btn:is(:hover, :focus-visible) {
   color: var(--text-majorelle-blue);
 
 }
 
 
+
+.service .container {
+  display: grid;
+  gap: 25px;
+}
+
+
+.service-card:nth-child(2) {
+  background-color: var(--bg-chrome-yellow-alpha-5);
+}
+
+.service-card:nth-child(3) {
+  background-color: var(--bg-red-salsa-alpha-5);
+}
+
+.service-card:nth-child(4) {
+  background-color: var(--bg-majorelle-blue-alpha-5);
+}
+
+.service-card {
+  padding: 25px 20px;
+  border-radius: var(--radius-20);
+}
+
+.service-card .card-title{
+  margin-block: 10px 5px;
+}
