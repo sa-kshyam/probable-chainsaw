@@ -200,6 +200,12 @@ img {
 
 }
 
+.img-holder{
+  aspect-ratio: var(--width) / var(--height);
+  background-color: var(--bg-gainsboro);
+  overflow: hidden;
+}
+
 
 
 /* PRELOADER */
@@ -397,7 +403,7 @@ img {
   height: 50px;
   color: var(--text-white);
   padding-inline: 30px;
-  border-radius: 100px;
+  border-radius: var(--radius-pill);
   /* CHANGED: Forcing a hard value ensures it stays a perfect pill shape */
   display: flex;
   justify-content: center;
@@ -406,6 +412,16 @@ img {
   max-width: max-content;
   transition: var(--transition-1);
 }
+
+.btn-primary{
+  background-color: var(--bg-majorelle-blue);
+}
+
+.btn-primary:is(:hover, :focus-visible){
+  background-color: var(--bg-ocean-blue);
+  box-shadow: var(--shadow-2);
+}
+
 
 .hero-btn .btn-img {
   position: relative;
@@ -498,3 +514,66 @@ img {
 .service-card .card-title{
   margin-block: 10px 5px;
 }
+
+.desti .section-title{
+  margin-block-end: 40px;
+}
+.desti-list {
+  display: grid;
+  gap: 30px;
+}
+
+.desti-card .card-banner{
+  position: relative;
+  border-radius: var(--radius-30);
+}
+
+
+.desti-card:is(:hover, :focus-within) .img-cover{
+  transform: scale(1.05);
+}
+
+.desti-card .card-price {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: var(--bg-white);
+  color: var(--text-majorelle-blue);
+  font-weight: var(--weight-bold);
+  font-size: 1.8rem;
+  line-height: 1.45;
+  padding: 5px 15px;
+  border-radius: var(--radius-pill);
+}
+
+.desti-card.card-title{
+  margin-block: 15px 5px;
+  transition: var(--transition-1);
+}
+ .desti-card.card-title:is(:hover, :focus-visible){
+  color: var(--text-majorelle-blue);
+ }
+
+ .desti-card :is(.card-rating, span){
+  display: flex;
+  align-items: center;
+ }
+ .desti-card .card-rating{
+  margin-block-start: 10px;
+  gap: 10px;
+ }
+
+ .desti-card .card-rating .span {
+  background-color: var(--bg-sunglow-alpha-10);
+  gap: 5px;
+  padding: 4px 12px;
+  border-radius: var(--radius-pill);
+ }
+ .desti-card .card-rating ion-icon {
+  color: var(--text-sunglow);
+ }
+
+ .desti .btn {
+  margin-inline: auto;
+  margin-block-start: 40px;
+ }
