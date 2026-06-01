@@ -411,13 +411,22 @@ img {
   gap: 10px;
   max-width: max-content;
   transition: var(--transition-1);
-}
+} 
 
 .btn-primary{
   background-color: var(--bg-majorelle-blue);
 }
 
 .btn-primary:is(:hover, :focus-visible){
+  background-color: var(--bg-ocean-blue);
+  box-shadow: var(--shadow-2);
+}
+
+.btn .btn-primary{
+  background-color: var(--bg-majorelle-blue);
+}
+
+.btn .btn-primary:is(:hover, :focus-visible){
   background-color: var(--bg-ocean-blue);
   box-shadow: var(--shadow-2);
 }
@@ -546,11 +555,11 @@ img {
   border-radius: var(--radius-pill);
 }
 
-.desti-card.card-title{
+.desti-card .card-title{
   margin-block: 15px 5px;
   transition: var(--transition-1);
 }
- .desti-card.card-title:is(:hover, :focus-visible){
+ .desti-card .card-title:is(:hover, :focus-visible){
   color: var(--text-majorelle-blue);
  }
 
@@ -576,4 +585,49 @@ img {
  .desti .btn {
   margin-inline: auto;
   margin-block-start: 40px;
+ }
+
+ .exp .container{
+  display: grid;
+  gap: 50px;
+ }
+ .exp-banner {
+  position: relative;
+ }
+ .exp .section-text {
+  margin-block-end: 20px;
+ }
+ 
+ .exp-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-block-start: 15px;
+ }
+
+ .exp-item .item-title {
+  color: var(--text-majorelle-blue);
+  font-size: 3.6rem;
+  font-weight: var(--weight-bold);
+ }
+
+
+ .exp-shape {
+  position: absolute;
+  top: 50%;
+  left: -10px;
+  width: 25%;
+  filter: drop-shadow(var(--shadow-4)) ;
+ }
+
+
+ .gallery .section-title{ margin-block-end: 40px;} 
+
+ .gallery-list {
+  display: grid;
+  gap: 15px;
+ }
+
+ .gallery .item-banner {
+  border-radius: var(--radius-30);
  }
