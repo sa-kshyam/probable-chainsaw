@@ -1,76 +1,105 @@
 :root {
   /* background colors */
   --bg-white: hsl(0, 0%, 100%);
---bg-black-alpha-20: hsla(0, 0%, 0%, 0.2);
---bg-lavender-blush: hsl(0, 100%, 98%);
---bg-majorelle-blue: hsl(249, 95%, 63%);
---bg-ocean-blue: hsl(249, 63%, 54%);
---bg-majorelle-blue-alpha-5: hsla(249, 95%, 63%, 0.05);
---bg-misty-rose: hsl(0, 100%, 95%);
---bg-red-salsa: hsl(357, 94%, 63%);
---bg-red-salsa-alpha-5: hsla(357, 94%, 63%, 0.05);
---bg-english-vermillion: hsl(357, 64%, 53%);
---bg-chrome-yellow-alpha-5: hsla(40, 100%, 50%, 0.05);
---bg-sunglow-alpha-10: hsla(48, 100%, 50%, 0.1);
---bg-gainsboro: hsl(0, 0%, 85%);
+  --bg-black-alpha-20: hsla(0, 0%, 0%, 0.2);
+  --bg-lavender-blush: hsl(0, 100%, 98%);
+  --bg-majorelle-blue: hsl(249, 95%, 63%);
+  --bg-ocean-blue: hsl(249, 63%, 54%);
+  --bg-majorelle-blue-alpha-5: hsla(249, 95%, 63%, 0.05);
+  --bg-misty-rose: hsl(0, 100%, 95%);
+  --bg-red-salsa: hsl(357, 94%, 63%);
+  --bg-red-salsa-alpha-5: hsla(357, 94%, 63%, 0.05);
+  --bg-english-vermillion: hsl(357, 64%, 53%);
+  --bg-chrome-yellow-alpha-5: hsla(40, 100%, 50%, 0.05);
+  --bg-sunglow-alpha-10: hsla(48, 100%, 50%, 0.1);
+  --bg-gainsboro: hsl(0, 0%, 85%);
 
   /* text color */
   --text-white: hsl(0, 0%, 100%);
---text-gunmetal: hsl(209, 40%, 14%);
---text-light-coral: hsl(357, 96%, 73%);
---text-granite-gray: hsl(210, 4%, 38%);
---text-majorelle-blue: hsl(249, 95%, 63%);
---text-sunglow: hsl(48, 100%, 50%);
+  --text-gunmetal: hsl(209, 40%, 14%);
+  --text-light-coral: hsl(357, 96%, 73%);
+  --text-granite-gray: hsl(210, 4%, 38%);
+  --text-majorelle-blue: hsl(249, 95%, 63%);
+  --text-sunglow: hsl(48, 100%, 50%);
   /* border color */
   --border-gainsboro: hsl(0, 1%, 85%);
 
   /* typography */
   --ff-poppins: 'Poppins', sans-serif;
 
---fontSize-1: 4.2rem;
---fontSize-2: 3.6rem;
---fontSize-3: 2.5rem;
---fontSize-4: 2.4rem;
---fontSize-5: 2rem;
---fontSize-6: 1.6rem;
---fontSize-7: 1.5rem;
+  --fontSize-1: 4.2rem;
+  --fontSize-2: 3.6rem;
+  --fontSize-3: 2.5rem;
+  --fontSize-4: 2.4rem;
+  --fontSize-5: 2rem;
+  --fontSize-6: 1.6rem;
+  --fontSize-7: 1.5rem;
 
---weight-bold: 700;
---weight-semiBold: 600;
---weight-medium: 500;
+  --weight-bold: 700;
+  --weight-semiBold: 600;
+  --weight-medium: 500;
 
   /* spacing, shadows, radius */
   --shadow-1: 0 2px 10px hsla(209, 40%, 14%, 10%);
---shadow-2: 0 5px 10px hsla(249, 95%, 63%, 25%);
---shadow-3: 0 5px 10px hsla(357, 64%, 53%, 25%);
---shadow-4: 0 30px 50px hsla(357, 64%, 53%, 30%);
---section-spacing: 80px;
+  --shadow-2: 0 5px 10px hsla(249, 95%, 63%, 25%);
+  --shadow-3: 0 5px 10px hsla(357, 64%, 53%, 25%);
+  --shadow-4: 0 30px 50px hsla(357, 64%, 53%, 30%);
+  --section-spacing: 80px;
 
 
-/* transistion */
---transition-1: 250ms ease;
---transition-2: 500ms ease;
---cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
+  /* transistion */
+  --transition-1: 250ms ease;
+  --transition-2: 500ms ease;
+  --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
 }
 
 /* RESET */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-li { list-style: none; }
-a, img, span, button, ion-icon { display: block; }
-a { color: inherit; text-decoration: none; }
-input, button { background: none; border: none; font: inherit; }
-button { cursor: pointer; }
-ion-icon { pointer-events: none; }
+
+li {
+  list-style: none;
+}
+
+a,
+img,
+span,
+button,
+ion-icon {
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+input,
+button {
+  background: none;
+  border: none;
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+ion-icon {
+  pointer-events: none;
+}
 
 html {
   font-family: var(--ff-poppins);
   font-size: 10px;
   scroll-behavior: smooth;
 }
+
 body {
   background-color: var(--bg-lavender-blush);
   color: var(--text-granite-gray);
@@ -78,10 +107,16 @@ body {
   line-height: 1.8;
   height: 300vh;
 }
-body.nav-active { overflow: hidden; }
+
+body.nav-active {
+  overflow: hidden;
+}
 
 /* REUSED STYLE */
-.container { padding-inline: 16px; }
+.container {
+  padding-inline: 16px;
+}
+
 .btn {
   height: 50px;
   color: var(--text-white);
@@ -94,8 +129,12 @@ body.nav-active { overflow: hidden; }
   max-width: max-content;
   transition: var(--transition-1);
 }
-.btn-secondary { background-color:var(--bg-red-salsa);}
-.btn-secondary:is(:hover, :focus-visible) { 
+
+.btn-secondary {
+  background-color: var(--bg-red-salsa);
+}
+
+.btn-secondary:is(:hover, :focus-visible) {
   background-color: var(--bg-english-vermillion);
   box-shadow: var(--shadow-3);
 }
@@ -104,20 +143,20 @@ body.nav-active { overflow: hidden; }
   padding-block-end: var(--section-spacing);
 }
 
-.has-bg-image{
+.has-bg-image {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
-.title{
+.title {
   color: var(--text-gunmetal);
   font-weight: var(--weight-semiBold);
   line-height: 1.45;
 }
 
 
-.h1{
+.h1 {
   font-size: var(--fontSize-1);
   line-height: 1.2;
 }
@@ -131,19 +170,19 @@ body.nav-active { overflow: hidden; }
 }
 
 
-.img-cover{
+.img-cover {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: var(--transition-2);
 }
 
-.w-100{
+.w-100 {
   width: 100%;
 }
 
 
-img{
+img {
   height: auto;
 }
 
@@ -156,53 +195,86 @@ img{
 /* PRELOADER */
 .preloader {
   position: fixed;
-  top: 0; left: 0; width: 100%; height: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background-color: var(--bg-lavender-blush);
   display: grid;
   place-content: center;
   z-index: 6;
   transition: var(--transition-1);
 }
+
 .preloader.remove {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
-.preloader .img { animation: bounce 800ms ease-in-out infinite alternate; }
+
+.preloader .img {
+  animation: bounce 800ms ease-in-out infinite alternate;
+}
+
 @keyframes bounce {
-  0% { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
 
 /* HEADER & NAVBAR */
 .header {
   padding-block: 30px;
   position: absolute;
-  top: 0; left: 0; width: 100%;
+  top: 0;
+  left: 0;
+  width: 100%;
   z-index: 4;
 }
+
 .header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 .header.active {
   position: fixed;
   background-color: var(--bg-white);
   box-shadow: var(--shadow-1);
   animation: slideIn 500ms ease forwards;
 }
+
 @keyframes slideIn {
-  0% { transform: translateY(-100%); }
-  100% { transform: translateY(0); }
+  0% {
+    transform: translateY(-100%);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
 }
-.header .logo img { width: 160px; }
-.nav-toggle-btn { font-size: 3.2rem; color: var(--text-gunmetal); }
+
+.header .logo img {
+  width: 160px;
+}
+
+.nav-toggle-btn {
+  font-size: 3.2rem;
+  color: var(--text-gunmetal);
+}
 
 .navbar {
   position: fixed;
-  top: 0; right: -350px;
-  max-width: 350px; width: 100%; height: 100vh;
+  top: 0;
+  right: -350px;
+  max-width: 350px;
+  width: 100%;
+  height: 100vh;
   background-color: var(--bg-white);
   padding: 30px 16px;
   display: flex;
@@ -211,12 +283,22 @@ img{
   transition: 400ms var(--cubic-out);
   visibility: hidden;
 }
+
 .navbar.active {
   transform: translateX(-350px);
   visibility: visible;
 }
-.navbar-top { display: flex; justify-content: space-between; align-items: center; }
-.navbar-list { margin-block-start: 50px; }
+
+.navbar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-list {
+  margin-block-start: 50px;
+}
+
 .navbar-link {
   position: relative;
   color: var(--text-gunmetal);
@@ -225,7 +307,10 @@ img{
   padding-block: 8px;
   transition: var(--transition-1);
 }
-.navbar-link:is(:hover, :focus-visible, .active) { color: var(--text-majorelle-blue); }
+
+.navbar-link:is(:hover, :focus-visible, .active) {
+  color: var(--text-majorelle-blue);
+}
 
 .header-action {
   margin-block-start: auto;
@@ -233,33 +318,46 @@ img{
   border-top: 1px solid var(--border-gainsboro);
   display: flex;
   justify-content: space-around;
-  align-items: center; 
+  align-items: center;
   gap: 10px;
 }
-.login-btn { color: var(--text-gunmetal); font-size: var(--fontSize-7); font-weight: var(--weight-medium); }
+
+.login-btn {
+  color: var(--text-gunmetal);
+  font-size: var(--fontSize-7);
+  font-weight: var(--weight-medium);
+}
 
 .overlay {
   position: fixed;
-  top: 0; left: 0; width: 100%; height: 100vh;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 4;
-  opacity: 0; visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
   transition: var(--transition-1);
 }
-.overlay.active { opacity: 1; visibility: visible; }
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
 
 .hero {
   padding-block-start: 150px;
 }
 
-.hero.container{
+.hero.container {
   display: grid;
   gap: 50;
 }
 
 
 
-.hero-subtitle{
+.hero-subtitle {
   background-color: var(--bg-misty-rose);
   color: var(--text-light-coral);
   font-size: var(--fontSize-7);
@@ -270,3 +368,88 @@ img{
   padding: 8px 20px;
   border-radius: var(--radius-pill);
 }
+
+
+.hero-title{
+  margin-block: 20px;
+}
+
+
+.hero-text{
+  margin-block-end: 30px;
+}
+
+.hero .btn-secondary{
+  margin-block-end: 20px;
+}
+
+.btn {
+  height: 50px;
+  color: var(--text-white);
+  padding-inline: 30px;
+  border-radius: 100px; /* CHANGED: Forcing a hard value ensures it stays a perfect pill shape */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  max-width: max-content;
+  transition: var(--transition-1);
+}
+.hero-btn .btn-img {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-color: var(--bg-gainsboro);
+  border-radius: 50%;
+  box-shadow: var(--shadow-1);
+  margin-right: 15px; /* ADDED: This pushes the text away so the icon has room to overlap safely */
+} 
+
+.hero-btn .btn-img {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  background-color: var(--bg-gainsboro);
+  border-radius: 50%;
+  box-shadow: var(--shadow-1);
+  flex-shrink: 0; /* ADDED: Ensures the circle never gets squished or distorted */
+}
+
+.hero-btn ion-icon {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(50%, -50%);
+  background-color: var(--bg-white);
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: var(--shadow-1);
+  z-index: 1;
+}
+
+.hero-btn {
+  color: var(--text-gunmetal);
+  font-weight: var(--weight-medium);
+  display: flex;
+  align-items: center;
+  gap: 25px; /* Keeps a clean spacing gap */
+  transition: var(--transition-1);
+  flex-wrap: nowrap;
+}
+
+.hero-btn .img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-2);
+  border-radius: 50%;
+}
+.hero-btn .text {
+  white-space: nowrap; /* ADDED: Forces "Watch our Story" to stay on a single line */
+}
+.hero-btn:is(:hover, :focus-visible){
+  color: var(--text-majorelle-blue);
+
+}
+
+

@@ -18,7 +18,7 @@ const navTogglers = document.querySelectorAll("[data-nav-toggler]");
 const navbar = document.querySelector("[data-navbar]");
 const overlay = document.querySelector("[data-overlay]");
 
-const toggleNav = function () { 
+const toggleNav = function () {
   if (navbar && overlay) {
     navbar.classList.toggle("active");
     overlay.classList.toggle("active");
@@ -37,7 +37,7 @@ navTogglers.forEach(toggler => {
 const header = document.querySelector("[data-header]");
 
 if (header) {
-  window.addEventListener("scroll", function() { 
+  window.addEventListener("scroll", function () {
     if (window.scrollY > 100) {
       header.classList.add("active");
     } else {
