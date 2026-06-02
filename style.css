@@ -810,7 +810,6 @@ padding-inline: 30px;
 
 border-radius: var(--radius-pill);
 
-/* CHANGED: Forcing a hard value ensures it stays a perfect pill shape */
 
 display: flex;
 
@@ -882,7 +881,7 @@ box-shadow: var(--shadow-1);
 
 margin-right: 15px;
 
-/* ADDED: This pushes the text away so the icon has room to overlap safely */
+
 
 }
 
@@ -904,7 +903,7 @@ box-shadow: var(--shadow-1);
 
 flex-shrink: 0;
 
-/* ADDED: Ensures the circle never gets squished or distorted */
+
 
 }
 
@@ -946,7 +945,7 @@ align-items: center;
 
 gap: 25px;
 
-/* Keeps a clean spacing gap */
+
 
 transition: var(--transition-1);
 
@@ -976,7 +975,7 @@ border-radius: 50%;
 
 white-space: nowrap;
 
-/* ADDED: Forces "Watch our Story" to stay on a single line */
+
 
 }
 
@@ -1291,3 +1290,157 @@ border-radius: var(--radius-30);
   padding-block: 60px;
 }
 
+.footer .logo img {
+  width: 180px;
+}
+
+.footer-brand .footer-text {
+  margin-block: 20px;
+}
+
+.social-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-link{
+  color: var(--text-majorelle-blue);
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: var(--radius-pill);
+  transition: var(--transition-1);
+}
+
+.social-link:is(:hover, :focus-visible){
+  background-color: var(--bg-majorelle-blue);
+  color: var(--text-white);
+}
+
+.footer-list-title{
+  color: var(--text-gunmetal);
+  font-size: var(--fontSize-5);
+  margin-block-end: 15px;
+}
+
+.footer-link {
+  margin-block-start: 10px;
+}
+
+.footer-link:is(:hover, :focus-visible){
+  text-decoration: underline;
+}
+
+.footer-list .footer-text {
+  margin-block-end: 15px;
+}
+
+.input-field {
+  width: 100%;
+  height: 55px;
+  padding: 10px 60px 10px 20px; 
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-gainsboro);
+  border-radius: var(--radius-pill);
+  color: var(--text-gunmetal);
+  outline: none;
+}
+
+.input-wrapper{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 350px;
+}
+
+.input-btn:is(:hover, :focus-visible) {
+  background-color: var(--bg-ocean-blue);
+}
+
+.input-btn {
+  position: absolute;
+  top: 5px;      
+  right: 5px;    
+  bottom: 5px;   
+  width: 45px;   
+  background-color: var(--bg-majorelle-blue);
+  color: var(--text-white);
+  border-radius: var(--radius-circle);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: var(--transition-1);
+}
+
+.input-btn ion-icon {
+  transform: translateX(-2px) rotate(45deg);
+}
+
+.input-btn:is(:hover, :focus-visible) {
+  background-color: var(--bg-ocean-blue);
+}
+
+.footer-bottom {
+  padding-block: 30px;
+  border-block-start: 1px solid var(--border-gainsboro);
+}
+
+.copyright {
+  margin-block-end: 20px;
+}
+
+.copyright-link {
+  display: flex;
+  color: var(--text-majorelle-blue);
+  font-weight: var(--weight-medium);
+}
+
+.footer-bottom-link:is(:hover, :focus-visible) {
+  text-decoration: underline;
+  color: black;
+}
+
+
+/** Media queries **/
+
+/** RESPONSIVE FOR LARGER THAN 575PX SCREEN**/
+
+@media(min-width: 575px){
+
+
+/** REUSED STYLE**/
+
+  .container{
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+
+ /** 
+ *HEADER
+     **       **/
+
+ .navbar {
+  padding-inline: 40px;
+  padding-block-start: 40px;
+ }
+
+
+
+ /** 
+ ***HERO
+ **/
+
+.hero-text {
+  max-width: 42ch;
+}
+
+.hero .wrapper {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+}
